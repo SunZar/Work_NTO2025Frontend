@@ -23,6 +23,7 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         subscribe()
     }
 
+
     private fun subscribe() {
         viewModel.state.collectWhenStarted(this) { state ->
             binding.loading.visibleOrGone(state)
