@@ -1,6 +1,8 @@
 package ru.myitschool.work.ui.login
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -22,7 +24,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         _binding = FragmentLoginBinding.bind(view)
         subscribe()
     }
-
 
     private fun subscribe() {
         viewModel.state.collectWhenStarted(this) { state ->
